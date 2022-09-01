@@ -17,65 +17,73 @@
   </head>
   <body>
     <!-- Search By City Name -->
-    <div class="container w-50 mx-auto">
-      <div class="row">
-        <div class="col-12">
-          <div class="d-flex" role="search">
-            <input
-              id="search-field"
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              id="search-btn"
-              class="btn btn-outline-success"
-              type="submit"
-            >
-              Search
-            </button>
-          </div>
+    <div class="container search-container w-50 mx-auto mb-4">
+      <div class="col-12">
+        <div class="d-flex" role="search">
+          <input
+            id="search-field"
+            class="form-control me-2"
+            type="search"
+            placeholder="Search by City Name"
+            aria-label="Search"
+          />
+          <button id="search-btn" class="btn btn-outline-success" type="submit">
+            Search
+          </button>
+          <br />
         </div>
+        <p id="error" class="pt-2 d-none text-danger fs-5">City Not Found 😟</p>
       </div>
     </div>
-    <br />
-    <br />
 
     <!-- Weather Card -->
 
-    <div class="container mx-auto">
-      <div class="container__inner">
-        <section class="weatherCard rainy">
-          <div class="title__container">
+    <div class="container w-50 mx-auto">
+      <div class="container-inner">
+        <section class="weatherCard rainy partialy-cloudy">
+          <div class="title-container">
             <div class="weatherIcon">
-              <i class="fa-solid fa-cloud-bolt"></i>
+              <img id="weather-icon" src="" alt="" />
             </div>
             <div>
-              <div class="title">Weather Today</div>
+              <div class="title">
+                Weather Today <br />
+                <span id="todays-date"></span>
+              </div>
               <span id="city" class="city"></span>
               <span id="country"></span>
             </div>
           </div>
           <div class="main">
             <div class="temperature">
-              <b id="temperature" class="temperature__max"> &deg;C</b>
-              <!-- <b id="country" class="temperature__min"> </b> -->
+              <b id="temperature" class="temperature-max"> &deg;C</b>
             </div>
-            <div class="forecast">Thunderstorm</div>
+            <div id="forecast" class="forecast pb-3"></div>
           </div>
-          <div class="info__container">
-            <div class="info pressure">
-              <div class="info__title">Humidity</div>
-              <div class="info__value">90%</div>
+          <div class="info-container">
+            <div class="info humidity">
+              <div class="info-title">Humidity</div>
+              <div id="humidity" class="info-value"></div>
+            </div>
+            <div class="info feel-like">
+              <div class="info-title">Feel's like</div>
+              <div id="feel-like" class="info-value"></div>
+            </div>
+            <div class="info wind">
+              <div class="info-title">Wind</div>
+              <div id="wind" class="info-value"></div>
+            </div>
+            <div class="info sunrise">
+              <div class="info-title">Sunrise</div>
+              <div id="sunrise" class="info-value"></div>
+            </div>
+            <div class="info sunset">
+              <div class="info-title">Sunset</div>
+              <div id="sunset" class="info-value"></div>
             </div>
             <div class="info visibility">
-              <div class="info__title">Rain probability</div>
-              <div class="info__value">100%</div>
-            </div>
-            <div class="info rain">
-              <div class="info__title">Precipitation</div>
-              <div class="info__value">80mm</div>
+              <div class="info-title">Visibility</div>
+              <div id="visibility" class="info-value"></div>
             </div>
           </div>
         </section>
