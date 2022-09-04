@@ -77,6 +77,7 @@ const displayWeatherData = (data = {}) => {
   const imgIcon = document.getElementById('weather-icon');
   imgIcon.setAttribute('src', iconURL);
 
+  //* set current time and Date
   document.getElementById('todays-date').innerText = new Date()
     .toString()
     .slice(0, 31);
